@@ -1,0 +1,6 @@
+%% Exercise 3
+x=[1 1 1;1 1 0;1 0 0]; % Matrix for QR decomposition by Householder Reflections
+[R,U]=house_qr(x) % Compute decomposition
+I=eye(size(U)); % Set the identity matrix equal to the size of U
+Q=house_apply(U,I) % Solve for value Q from U and I
+QR=Q*R
