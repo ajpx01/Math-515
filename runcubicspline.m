@@ -13,15 +13,15 @@ smoothday=linspace(min(days),max(days),100);
 average_weightml=[7 16 19 15 12 10.5 10]';
 average_weightyl=[7 18 45 49 32 30.5 30]';
 
-average_weight_thirddayml=cubic_spline(days,average_weightml,day)
-spline_average_weightml=cubic_spline(days,average_weightml,smoothday);
-splineml_thirdday=spline(days,average_weightml,day)
-splineml=spline(days,average_weightml,smoothday);
+average_weight_thirddayml=cubic_spline(days,average_weightml,day) % average weight on third day for mature leaves using interpolator
+spline_average_weightml=cubic_spline(days,average_weightml,smoothday); % calculate all average weights for mature leaves using interpolator
+splineml_thirdday=spline(days,average_weightml,day) % use built-in spline function for dataset to find average weight on third day for mature leaves
+splineml=spline(days,average_weightml,smoothday); % use built-in spline function for dataset to find average weight for all days of mature leaves
 
-average_weight_thirddayyl=cubic_spline(days,average_weightyl,day)
-spline_average_weightyl=cubic_spline(days,average_weightyl,smoothday);
-splineyl_thirdday=spline(days,average_weightyl,day)
-splineyl=spline(days,average_weightyl,smoothday);
+average_weight_thirddayyl=cubic_spline(days,average_weightyl,day) % average weight on third day for young leaves using interpolator
+spline_average_weightyl=cubic_spline(days,average_weightyl,smoothday); % calculate all average weights for young leaves using interpolator
+splineyl_thirdday=spline(days,average_weightyl,day) % use built-in spline function for dataset to find average weight on third day for young leaves
+splineyl=spline(days,average_weightyl,smoothday); % use built-in spline function for dataset to find average weight for all days of young leaves
 
 figure;
 subplot(2,1,1)
