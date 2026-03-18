@@ -8,7 +8,7 @@ ystar1=cubic_spline(molality,coefficient,xstar1)
 % a)
 days=[0 6 10 13 17 20 28]';
 day=3;
-smoothday=linspace(min(days),max(days),100); % Method of using linspace for creating smooth plot is from Google Gemini
+smoothday=linspace(min(days),max(days),100); % Method of using linspace for creating smooth plot was assisted by Google Gemini and MATLAB Copilot
 
 average_weightml=[7 16 19 15 12 10.5 10]';
 average_weightyl=[7 18 45 49 32 30.5 30]';
@@ -61,7 +61,7 @@ maxX2=smoothday(index2) % Method for finding the day coordinate of the apex was 
 years1=[2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026]'; % Years 2016-2026
 sap5001=[1918.60 2275.12 2789.80 2607.39 3278.20 3793.75 4573.82 3960.66 4804.49 5979.52 6929.12]'; 
 % S&P 500 price at each year from 2016-2026, from https://www.multpl.com/s-p-500-historical-prices/table/by-year
-smoothprice1=linspace(min(years1),max(years1),100); % Method of using linspace for creating smooth plot is from Google Gemini
+smoothprice1=linspace(min(years1),max(years1),100); % Method of using linspace for creating smooth plot was assisted by Google Gemini and MATLAB Copilot
 
 interpolator_sap_price1=cubic_spline(years1,sap5001,smoothprice1);
 spline_sap_price1=spline(years1,sap5001,smoothprice1);
@@ -78,7 +78,7 @@ legend('Data Set','Spline','Interpolator')
 years2=[2016 2018 2020 2022 2024 2026]'; % Years 2016-2026
 sap5002=[1918.60 2789.80 3278.20 4573.82 4804.49 6929.12]'; 
 % S&P 500 price at each year from 2016-2026, from https://www.multpl.com/s-p-500-historical-prices/table/by-year
-smoothprice2=linspace(min(years2),max(years2),100); % Method of using linspace for creating smooth plot is from Google Gemini
+smoothprice2=linspace(min(years2),max(years2),100); % Method of using linspace for creating smooth plot was assisted by Google Gemini and MATLAB Copilot
 
 interpolator_sap_price2=cubic_spline(years2,sap5002,smoothprice2);
 spline_sap_price2=spline(years2,sap5002,smoothprice2);
@@ -92,7 +92,7 @@ legend('Data Set','Spline','Interpolator')
 
 years3=[2016 2019 2022 2025]';
 sap5003=[1918.60 2607.39 4573.82 5979.52]';
-smoothprice3=linspace(min(years3),max(years3),100); % Method of using linspace for creating smooth plot is from Google Gemini
+smoothprice3=linspace(min(years3),max(years3),100); % Method of using linspace for creating smooth plot was assisted by Google Gemini and MATLAB Copilot
 
 interpolator_sap_price3=cubic_spline(years3,sap5003,smoothprice3);
 spline_sap_price3=spline(years3,sap5003,smoothprice3);
