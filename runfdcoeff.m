@@ -27,13 +27,13 @@ h=10.^(-1:-1:-8);
 firstorderfwfd=(f(x0+h)-f(x0))./h;
 errorapproxexp=abs(firstorderfwfd-fprimeexact1); % From Matlab Drive Class Folder
 convergplot=polyfit(log(h),log(errorapproxexp),1);
-order_convergence_exp=c(1)
+order_convergence_exp=convergplot(1)
 
 %% Part c
 f1=@(x) sin(x); % Set function whose derivative will be approximated
 x_j12=[0;1;2;3;4]; % Set stencil points
 coeff_sin=fdcoeff(1,0,x_j12) % Produce forward finite difference coefficients for 1st derivative with order 4
 f_sin=sin(x_j12);
-approxderivative_sin=c_sin*f_sin % 1st derivative order 4 with 5 stencil points
+approxderivative_sin=coeff_sin*f_sin % 1st derivative order 4 with 5 stencil points
 % This approximation is 4th order accurate. 
 
