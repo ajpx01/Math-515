@@ -22,7 +22,7 @@ error_max_tspan=max(abs(y_exact-y1))
 % ultimately figured out how to index these in the loop in the correct way
 error=zeros(1,n);
 Nh=zeros(1,n);
-for n=1:20
+for n=1:10
     Nh(n)=2^n;
     % section below was recommended by MATLAB Copilot
     [t, y1] = backward_euler(odefun, tspan, y0, Nh(n));
