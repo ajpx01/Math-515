@@ -1,0 +1,10 @@
+% Heun Predictor Corrector Function
+function [t, y] = heunPredictorCorrector(f,tspan,y0,Nh,varargin)
+t = linspace(tspan(1), tspan(2), Nh+1);
+y = zeros(length(y0), Nh+1);
+y(:,1) = y0;
+h = t(2) - t(1); % Step size
+for n = 1:Nh
+    yPredictor = y(:,n) + h * f(t(n), y(:,n), varargin{:});
+    y(:,n+1) = y(:,n) + (h/2) * (f(t(n), y(:,n), varargin{:}) + f(t(n+1), yPredictor, varargin{:}));
+end
